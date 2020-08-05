@@ -3,7 +3,7 @@
 cd $HOME
 
 # Install packages
-sudo apt install neovim nmap zsh git tmux curl
+sudo apt install neovim nmap zsh git tmux curl htop
 
 # Set default shell to zsh
 chsh -s $(which zsh)
@@ -25,6 +25,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf dotfiles/zshrc $HOME/.zshrc
-source $HOME/.zshrc
+# oh-my-zsh plugins
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# oh-my-zsh themes
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+source $HOME/.zshrc
