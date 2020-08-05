@@ -3,7 +3,7 @@
 cd $HOME
 
 # Install packages
-sudo apt install neovim nmap zsh git tmux
+sudo apt install neovim nmap zsh git tmux curl
 
 # Set default shell to zsh
 chsh -s $(which zsh)
@@ -17,6 +17,10 @@ cp .tmux/.tmux.conf.local .
 nvim_confdir=$HOME/.config/nvim
 mkdir -p $nvim_confdir
 ln -sf ../../dotfiles/nvim-init.vim $nvim_confdir/init.vim
+
+# neovim plugins
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
