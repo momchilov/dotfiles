@@ -8,6 +8,9 @@ sudo apt install neovim nmap zsh git tmux curl
 # Set default shell to zsh
 chsh -s $(which zsh)
 
+# rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # tmux config
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
