@@ -3,7 +3,7 @@
 cd $HOME
 
 # Install packages
-sudo apt install neovim nmap zsh git tmux curl htop
+sudo apt install neovim nmap zsh git tmux curl htop apt-file
 
 # Set default shell to zsh
 chsh -s $(which zsh)
@@ -14,7 +14,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # tmux config
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+ln -s -f dotfiles/tmux.conf.local $HOME/.tmux.conf.local
 
 # neovim
 nvim_confdir=$HOME/.config/nvim

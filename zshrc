@@ -7,8 +7,10 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin:/snap/bin
+export PATH=$PATH:/usr/local/go/bin:/snap/bin:$HOME/.local/bin:$HOME/Downloads/intellij/idea-IU-211.7142.45/bin/idea.sh
 export EDITOR=nvim
+
+export JAVA_OPTS="-Xms2G -Xmx2G" JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -128,6 +130,7 @@ DISABLE_UPDATE_PROMPT=false
 
 source $HOME/.cargo/env
 
+neofetch
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
