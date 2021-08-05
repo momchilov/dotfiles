@@ -8,6 +8,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin:/snap/bin:$HOME/.local/bin:$HOME/Downloads/intellij/idea-IU-211.7142.45/bin/idea.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 export EDITOR=nvim
 
 export JAVA_OPTS="-Xms2G -Xmx2G" JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
